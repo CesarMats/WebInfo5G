@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f2">
+  <meta name="description" content="Simulación visual de redes Wi-Fi y comparación interactiva de la transmisión móvil desde 2G hasta 5G.">
+  <title>Simulación de una red Wi-Fi · 5G, en claro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Navegación de la wiki">
+      <a class="brand" href="index.html#inicio" aria-label="5G, en claro, inicio">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9a14 14 0 0 1 18 0M6 12a9 9 0 0 1 12 0m-9 3a4 4 0 0 1 6 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg></span>
+        <span class="brand-name">5G, en claro<span class="brand-caption">Wiki de redes móviles</span></span>
+      </a>
+      <p class="side-label">Explorar temas</p>
+      <nav class="nav">
+        <a href="index.html#fundamentos"><span class="nav-num">01</span> Fundamentos</a>
+        <a href="index.html#estandares"><span class="nav-num">02</span> Estándares</a>
+        <a href="index.html#red"><span class="nav-num">03</span> Cómo funciona</a>
+        <a href="index.html#hotspots"><span class="nav-num">04</span> Hotspots</a>
+        <a href="index.html#seguridad"><span class="nav-num">05</span> Seguridad</a>
+        <a href="index.html#ventajas"><span class="nav-num">06</span> Ventajas y límites</a>
+        <a href="index.html#problemas"><span class="nav-num">07</span> Solución de problemas</a>
+        <a href="glosario.html"><span class="nav-num">08</span> Glosario</a>
+        <a href="simulacion.html" class="active" aria-current="page"><span class="nav-num">09</span> Simulación</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="source-link" href="16%20Wifi.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>
+          Consultar PDF de referencia
+        </a>
+        <p class="side-foot">Un recorrido visual por una red inalámbrica.</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="topbar">
+        <div class="crumb"><a href="index.html">Biblioteca</a> <span aria-hidden="true">/</span> <strong>Simulación</strong></div>
+        <a class="tag" href="glosario.html">Abrir glosario</a>
+        <details class="settings-menu">
+          <summary aria-label="Configuración" title="Configuración"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.7a8 8 0 0 1-1.6.9l-.3 1.8h-2.8l-.3-1.8a8 8 0 0 1-1.6-.9l-1.7.7-1.4-2.4 1.4-1.1a7 7 0 0 1 0-1.9l-1.4-1.1 1.4-2.4 1.7.7a8 8 0 0 1 1.6-.9l.3-1.8h2.8l.3 1.8a8 8 0 0 1 1.6.9l1.7-.7 1.4 2.4-1.4 1.1a7 7 0 0 1-.1 1.8Z" transform="translate(-1 -2) scale(1.08)"/></svg><span>Configuración</span></summary>
+          <div class="settings-panel"><label for="site-language">Idioma</label><select id="site-language" data-language-select><option value="es">Español</option><option value="en">English</option><option value="zh-CN">简体中文</option></select><button type="button" class="settings-action" data-print-page>Imprimir / Guardar como PDF</button><a class="settings-action" href="16%20Wifi.pdf" download>Descargar PDF de referencia</a><a class="settings-action" href="wifi-guia.pptx" download>Descargar PowerPoint</a></div>
+        </details>
+      </div>
+
+      <header class="simulation-hero">
+        <p class="eyebrow">Laboratorio visual · Redes móviles 2G–5G</p>
+        <h1>Un dato<br><em>en movimiento.</em></h1>
+        <p class="hero-copy">Sigue una respuesta por una red Wi-Fi y compara cómo evolucionó la transmisión móvil desde 2G hasta 5G. Explora las tecnologías, ventajas y límites de cada generación.</p>
+        <div class="simulation-meta"><span>6 etapas</span><span>Comparación 2G–5G</span><span>Modelo conceptual</span></div>
+      </header>
+
+      <section class="simulation-panel" aria-labelledby="map-title">
+        <div class="simulation-panel-heading">
+          <h2 id="map-title">Recorrido de una respuesta en Wi-Fi</h2>
+          <p class="simulation-direction">Internet <span aria-hidden="true">→</span> dispositivo · La solicitud viaja en sentido inverso</p>
+        </div>
+        <div class="flow-scroll" tabindex="0" aria-label="Diagrama desplazable del recorrido de datos">
+          <div class="flow-track" id="flow-track">
+            <article class="flow-node is-active" data-step="0" aria-current="step">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M11 29h19a7 7 0 0 0 .4-14A10.5 10.5 0 0 0 10 17a6 6 0 0 0 1 12Z"/><path d="M15 23h10m-3-3 3 3-3 3"/></svg>
+              <h3>Internet</h3><p>El servidor envía la respuesta solicitada.</p>
+            </article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="flow-node" data-step="1">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="8" y="10" width="24" height="20" rx="2"/><path d="M13 16h14M13 21h14M13 26h.01M18 26h.01M23 26h.01"/></svg>
+              <h3>Módem / ONT</h3><p>Conecta la red del hogar con el proveedor.</p>
+            </article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="flow-node" data-step="2">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="7" y="17" width="26" height="15" rx="2"/><path d="M13 17 10 7m17 10 3-10M12 24h.01M17 24h.01M22 24h.01M27 24h.01"/></svg>
+              <h3>Router + firewall</h3><p>Dirige el tráfico y aplica reglas de red.</p>
+            </article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="flow-node" data-step="3">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 16a20 20 0 0 1 26 0M12 21a13 13 0 0 1 16 0m-11 5a5 5 0 0 1 6 0"/><circle cx="20" cy="31" r="1.4" fill="currentColor"/></svg>
+              <h3>Punto de acceso</h3><p>Envía y recibe datos por ondas de radio.</p>
+            </article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="flow-node" data-step="4">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="11" y="6" width="18" height="28" rx="3"/><path d="M17 10h6m-5 19h4"/><path d="M5 15a9 9 0 0 1 0 10m30-10a9 9 0 0 0 0 10"/></svg>
+              <h3>Adaptador Wi-Fi</h3><p>Recibe la señal y procesa el cifrado.</p>
+            </article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="flow-node" data-step="5">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="7" width="30" height="21" rx="2"/><path d="M2 33h36l-3-5H5l-3 5Z"/><path d="m15 17 3 3 7-7"/></svg>
+              <h3>Tu dispositivo</h3><p>El navegador muestra la página recibida.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="simulation-controls" aria-label="Controles de simulación">
+          <button class="simulation-button primary" type="button" id="play-button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m8 5 11 7-11 7V5Z"/></svg>
+            Reproducir recorrido
+          </button>
+          <button class="simulation-button" type="button" id="previous-button" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            Anterior
+          </button>
+          <button class="simulation-button" type="button" id="next-button">
+            Siguiente
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <button class="simulation-button" type="button" id="reset-button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.6-6.4L3 8"/><path d="M3 3v5h5"/></svg>
+            Reiniciar
+          </button>
+          <span class="simulation-step-count" id="step-count" aria-live="polite">Paso 1 de 6</span>
+          <progress class="simulation-progress" id="simulation-progress" max="6" value="1" aria-label="Progreso del recorrido">1 de 6</progress>
+        </div>
+
+        <div class="simulation-explanation" role="status" aria-live="polite" aria-atomic="true">
+          <div><p class="eyebrow" id="step-label">ETAPA 1</p><h2 id="step-title">Internet responde</h2></div>
+          <p id="step-description">El servidor devuelve los datos de la página que pidió el navegador. La respuesta empieza su recorrido hacia tu red; la solicitud original viajó en sentido contrario.</p>
+        </div>
+      </section>
+
+      <section class="generation-lab" aria-labelledby="generation-title">
+        <header class="generation-heading">
+          <div>
+            <p class="eyebrow">Comparación interactiva · Redes móviles</p>
+            <h2 id="generation-title">De 2G a 5G: cómo cambia la transmisión</h2>
+            <p class="generation-intro">Selecciona una generación para comparar el recorrido de radio, la capacidad y los límites.</p>
+          </div>
+          <div class="generation-picker" role="group" aria-label="Elegir generación móvil">
+            <button type="button" data-generation-option="2g" aria-pressed="false">2G</button>
+            <button type="button" data-generation-option="3g" aria-pressed="false">3G</button>
+            <button type="button" data-generation-option="4g" aria-pressed="false">4G</button>
+            <button type="button" data-generation-option="5g" aria-pressed="true">5G</button>
+          </div>
+        </header>
+
+        <div class="generation-layout">
+          <div class="signal-visual" id="signal-visual" data-generation="5g" role="img" aria-label="Esquema del recorrido de radio entre un dispositivo, una estación base y el núcleo móvil">
+            <div class="signal-flow">
+              <div class="signal-endpoint">
+                <svg viewBox="0 0 40 48" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="2" width="22" height="42" rx="4"/><path d="M15 7h10M17 38h6"/><path d="M3 16a17 17 0 0 1 0 16m34-16a17 17 0 0 0 0 16"/></svg>
+                <strong id="mobile-device-label">Dispositivo móvil</strong>
+              </div>
+              <div class="signal-link" aria-hidden="true"><i class="signal-packet"></i><i class="signal-packet"></i><i class="signal-packet"></i></div>
+              <div class="signal-station">
+                <div class="signal-waves" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="cell-tower" aria-hidden="true">
+                  <i class="tower-mast"></i><i class="tower-arm tower-arm-one"></i><i class="tower-arm tower-arm-two"></i>
+                  <i class="tower-antenna tower-antenna-one"></i><i class="tower-antenna tower-antenna-two"></i><i class="tower-antenna tower-antenna-three"></i><i class="tower-antenna tower-antenna-four"></i><i class="tower-antenna tower-antenna-five"></i>
+                </div>
+                <strong id="base-station-label">Estación base</strong>
+                <small id="base-station-type">gNB</small>
+              </div>
+              <div class="signal-link" aria-hidden="true"><i class="signal-packet"></i><i class="signal-packet"></i><i class="signal-packet"></i></div>
+              <div class="signal-endpoint signal-core">
+                <div class="core-rack" aria-hidden="true"><i></i><i></i><i></i></div>
+                <strong id="mobile-core-label">Núcleo de red</strong>
+                <small id="mobile-core-type">5G Core</small>
+              </div>
+            </div>
+            <div class="radio-resources" aria-hidden="true">
+              <span>Recursos de radio · tiempo y frecuencia</span>
+              <div class="resource-blocks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+            <p class="signal-direction">Subida y bajada de datos · esquema, no a escala</p>
+          </div>
+
+          <div class="generation-details" role="status" aria-live="polite" aria-atomic="true">
+            <p class="eyebrow" id="generation-label">Quinta generación · 5G</p>
+            <h3 id="generation-name">5G NR</h3>
+            <p id="generation-summary">La estación base conecta el móvil con el núcleo 5G. La radio NR combina OFDM, antenas avanzadas y asignación flexible de recursos.</p>
+            <div class="generation-radio"><span>Tecnologías de acceso y radio</span><strong id="generation-radio-label">NR · CP-OFDM · Massive MIMO · beamforming</strong></div>
+            <div class="generation-metrics" aria-label="Comparación cualitativa">
+              <div class="generation-metric"><label for="capacity-meter">Capacidad potencial</label><strong id="capacity-value">Muy alta</strong><meter id="capacity-meter" min="0" max="4" value="4">4 de 4</meter></div>
+              <div class="generation-metric"><label for="latency-meter">Potencial de baja latencia</label><strong id="latency-value">Muy baja</strong><meter id="latency-meter" min="0" max="4" value="4">4 de 4</meter></div>
+              <div class="generation-metric"><label for="density-meter">Densidad de dispositivos</label><strong id="density-value">Muy alta</strong><meter id="density-meter" min="0" max="4" value="4">4 de 4</meter></div>
+            </div>
+            <div class="generation-takeaways">
+              <div><p class="eyebrow">Por qué mejora</p><p id="generation-advantage">Puede aumentar la capacidad por área, atender más dispositivos y reducir la latencia en condiciones adecuadas.</p></div>
+              <div><p class="eyebrow">Qué considerar</p><p id="generation-limits">El resultado depende de la banda, el despliegue, la señal, la distancia y la carga; las frecuencias más altas suelen cubrir áreas menores.</p></div>
+            </div>
+          </div>
+        </div>
+        <p class="generation-caveat"><strong>Comparación conceptual:</strong> las métricas son cualitativas, no mediciones ni velocidades garantizadas. 5G es una red móvil del operador; no sustituye a Wi-Fi.</p>
+      </section>
+
+      <section class="simulation-notes" aria-label="Funciones de los componentes">
+        <div><h3>Router y punto de acceso</h3><p>En muchos hogares son funciones del mismo equipo. El router comunica redes; el punto de acceso conecta los dispositivos inalámbricos a la red local.</p></div>
+        <div><h3>Adaptador y cifrado</h3><p>El adaptador Wi-Fi puede estar integrado en el móvil o portátil. En una red protegida, el tráfico inalámbrico usa cifrado como WPA2-AES o WPA3.</p></div>
+        <div><h3>Radio, no Internet</h3><p>Wi-Fi transporta datos entre equipos cercanos. El acceso a Internet depende también del módem o terminal óptico y del servicio del proveedor.</p></div>
+      </section>
+      <p class="simulation-caveat"><strong>Modelo simplificado:</strong> los equipos reales pueden combinar varias funciones, y la ruta depende de la configuración de cada red.</p>
+
+      <footer class="footer"><span>5G, en claro · Simulación educativa</span><span>Autores: Daniela Aldheni, Aline Celeste, Cesar Gabriel, Juan Aldrin y Pablo</span></footer>
+    </main>
+  </div>
+  <script>
+    const stages = [
+      { title: 'Internet responde', description: 'El servidor devuelve los datos de la página que pidió el navegador. La respuesta empieza su recorrido hacia tu red; la solicitud original viajó en sentido contrario.' },
+      { title: 'Módem / ONT conecta con el proveedor', description: 'El módem o terminal óptico recibe la conexión del proveedor y la presenta a la red del hogar. En algunos servicios, la ONT cumple esta función para fibra óptica.' },
+      { title: 'El router dirige el tráfico', description: 'El router decide a qué red local enviar los datos. El firewall aplica reglas para permitir o bloquear conexiones según la configuración.' },
+      { title: 'El punto de acceso transmite por radio', description: 'El punto de acceso convierte los datos en tramas Wi-Fi y las transmite por la banda disponible, como 2.4 o 5 GHz; 6 GHz se usa en equipos compatibles y donde está autorizado.' },
+      { title: 'El adaptador recibe y descifra', description: 'La tarjeta Wi-Fi del dispositivo recibe la señal. Si tiene las credenciales correctas, puede descifrar el tráfico protegido con WPA2-AES o WPA3.' },
+      { title: 'El navegador muestra la respuesta', description: 'El sistema entrega los datos a la aplicación que los pidió y el navegador dibuja la página. Las respuestas siguen el camino inverso para llegar de vuelta a Internet.' }
+    ];
+    const nodes = [...document.querySelectorAll('.flow-node')];
+    const arrows = [...document.querySelectorAll('.flow-arrow')];
+    const playButton = document.querySelector('#play-button');
+    const previousButton = document.querySelector('#previous-button');
+    const nextButton = document.querySelector('#next-button');
+    const resetButton = document.querySelector('#reset-button');
+    const stepLabel = document.querySelector('#step-label');
+    const stepTitle = document.querySelector('#step-title');
+    const stepDescription = document.querySelector('#step-description');
+    const stepCount = document.querySelector('#step-count');
+    const progress = document.querySelector('#simulation-progress');
+    let currentStage = 0;
+    let playbackTimer;
+    const translate = text => window.translateText ? window.translateText(text) : text;
+
+    function stopPlayback() {
+      window.clearInterval(playbackTimer);
+      playbackTimer = undefined;
+      playButton.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m8 5 11 7-11 7V5Z"/></svg> ${translate('Reproducir recorrido')}`;
+      playButton.setAttribute('aria-label', translate('Reproducir recorrido'));
+    }
+
+    function renderStage() {
+      nodes.forEach((node, index) => {
+        node.classList.toggle('is-active', index === currentStage);
+        node.classList.toggle('is-complete', index < currentStage);
+        if (index === currentStage) node.setAttribute('aria-current', 'step');
+        else node.removeAttribute('aria-current');
+      });
+      arrows.forEach((arrow, index) => arrow.classList.toggle('is-complete', index < currentStage));
+      stepLabel.textContent = translate(`ETAPA ${currentStage + 1}`);
+      stepTitle.textContent = translate(stages[currentStage].title);
+      stepDescription.textContent = translate(stages[currentStage].description);
+      stepCount.textContent = document.documentElement.lang === 'en'
+        ? `Step ${currentStage + 1} of ${stages.length}`
+        : `Paso ${currentStage + 1} de ${stages.length}`;
+      progress.value = currentStage + 1;
+      progress.textContent = `${currentStage + 1} ${document.documentElement.lang === 'en' ? 'of' : 'de'} ${stages.length}`;
+      previousButton.disabled = currentStage === 0;
+      nextButton.disabled = currentStage === stages.length - 1;
+      if (currentStage === stages.length - 1) stopPlayback();
+    }
+
+    function advance() {
+      if (currentStage < stages.length - 1) {
+        currentStage++;
+        renderStage();
+      }
+    }
+
+    playButton.addEventListener('click', () => {
+      if (playbackTimer) {
+        stopPlayback();
+        return;
+      }
+      if (currentStage === stages.length - 1) currentStage = 0;
+      playButton.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 5v14m8-14v14"/></svg> ${translate('Pausar recorrido')}`;
+      playButton.setAttribute('aria-label', translate('Pausar recorrido'));
+      playbackTimer = window.setInterval(advance, 1600);
+    });
+
+    previousButton.addEventListener('click', () => {
+      stopPlayback();
+      currentStage = Math.max(0, currentStage - 1);
+      renderStage();
+    });
+    nextButton.addEventListener('click', () => {
+      stopPlayback();
+      advance();
+    });
+    resetButton.addEventListener('click', () => {
+      stopPlayback();
+      currentStage = 0;
+      renderStage();
+    });
+    document.addEventListener('site-language-applied', renderStage);
+    renderStage();
+  </script>
+  <script>
+    const mobileGenerations = {
+      '2g': {
+        label: 'Segunda generación · 2G', name: '2G · GSM', station: 'BTS', core: 'MSC · núcleo 2G', radio: 'GSM · GMSK · TDMA/FDMA', blocks: 3,
+        summary: 'La estación base BTS enlaza el móvil con la red de voz. GSM digitalizó llamadas y SMS; GPRS y EDGE añadieron datos por paquetes en algunas redes.',
+        capacity: ['Baja', 1], latency: ['Alta', 1], density: ['Limitada', 1],
+        advantage: 'Digitalizó la voz y los SMS, y amplió la cobertura móvil con una infraestructura relativamente sencilla.',
+        limits: 'La capacidad para datos es muy limitada frente a generaciones posteriores; varias redes 2G ya se han apagado según el país.'
+      },
+      '3g': {
+        label: 'Tercera generación · 3G', name: '3G · UMTS', station: 'Node B', core: 'Núcleo 3G', radio: 'UMTS/WCDMA · CDMA', blocks: 5,
+        summary: 'La estación Node B conecta el dispositivo con una red móvil que admite voz y datos por paquetes. 3G hizo viable la navegación móvil y los primeros servicios de Internet en movimiento.',
+        capacity: ['Moderada', 2], latency: ['Media', 2], density: ['Moderada', 2],
+        advantage: 'Aumentó notablemente los datos móviles y permitió usar Internet y aplicaciones fuera de redes fijas.',
+        limits: 'La capacidad compartida y la latencia suelen ser menos favorables que en LTE o 5G; la disponibilidad de 3G varía por región.'
+      },
+      '4g': {
+        label: 'Cuarta generación · 4G LTE', name: '4G · LTE', station: 'eNodeB', core: 'EPC · núcleo 4G', radio: 'LTE · OFDMA / SC-FDMA · MIMO', blocks: 8,
+        summary: 'LTE lleva la red móvil a una arquitectura basada en paquetes IP. OFDMA, MIMO y canales más amplios elevan la capacidad para banda ancha móvil.',
+        capacity: ['Alta', 3], latency: ['Baja', 3], density: ['Alta', 3],
+        advantage: 'Ofreció banda ancha móvil con más capacidad y menor latencia que las generaciones anteriores, habilitando video y servicios IP.',
+        limits: 'El rendimiento depende de la banda, el ancho de canal, la señal, el transporte y cuántos usuarios comparten la celda.'
+      },
+      '5g': {
+        label: 'Quinta generación · 5G', name: '5G NR', station: 'gNB', core: '5G Core', radio: 'NR · CP-OFDM · Massive MIMO · beamforming', blocks: 12,
+        summary: 'La estación base conecta el móvil con el núcleo 5G. La radio NR combina OFDM, antenas avanzadas y asignación flexible de recursos.',
+        capacity: ['Muy alta', 4], latency: ['Muy baja', 4], density: ['Muy alta', 4],
+        advantage: 'Puede aumentar la capacidad por área, atender más dispositivos y reducir la latencia en condiciones adecuadas.',
+        limits: 'El resultado depende de la banda, el despliegue, la señal, la distancia y la carga; las frecuencias más altas suelen cubrir áreas menores.'
+      }
+    };
+    const generationButtons = [...document.querySelectorAll('[data-generation-option]')];
+    const signalVisual = document.querySelector('#signal-visual');
+    let activeGeneration = '5g';
+    const translateGeneration = text => window.translateText ? window.translateText(text) : text;
+
+    function renderGeneration(generation) {
+      activeGeneration = generation;
+      const details = mobileGenerations[generation];
+      signalVisual.dataset.generation = generation;
+      document.querySelector('#generation-label').textContent = translateGeneration(details.label);
+      document.querySelector('#generation-name').textContent = translateGeneration(details.name);
+      document.querySelector('#base-station-type').textContent = translateGeneration(details.station);
+      document.querySelector('#mobile-core-type').textContent = translateGeneration(details.core);
+      document.querySelector('#generation-radio-label').textContent = translateGeneration(details.radio);
+      document.querySelector('#generation-summary').textContent = translateGeneration(details.summary);
+      document.querySelector('#generation-advantage').textContent = translateGeneration(details.advantage);
+      document.querySelector('#generation-limits').textContent = translateGeneration(details.limits);
+      for (const [metric, value] of Object.entries({ capacity: details.capacity, latency: details.latency, density: details.density })) {
+        document.querySelector(`#${metric}-value`).textContent = translateGeneration(value[0]);
+        document.querySelector(`#${metric}-meter`).value = value[1];
+      }
+      document.querySelectorAll('.resource-blocks i').forEach((block, index) => {
+        block.classList.toggle('is-active', index < details.blocks);
+      });
+      generationButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.generationOption === generation)));
+    }
+
+    generationButtons.forEach(button => button.addEventListener('click', () => renderGeneration(button.dataset.generationOption)));
+    document.addEventListener('site-language-applied', () => renderGeneration(activeGeneration));
+    renderGeneration(activeGeneration);
+  </script>
+  <script src="settings.js"></script>
+</body>
+</html>

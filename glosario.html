@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f2">
+  <meta name="description" content="Consulta definiciones de redes 5G, tecnologías de radio, protocolos e infraestructura de conectividad.">
+  <title>Glosario de redes · 5G, en claro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Navegación de la wiki">
+      <a class="brand" href="index.html#inicio" aria-label="5G, en claro, inicio">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9a14 14 0 0 1 18 0M6 12a9 9 0 0 1 12 0m-9 3a4 4 0 0 1 6 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg></span>
+        <span class="brand-name">5G, en claro<span class="brand-caption">Wiki de redes móviles</span></span>
+      </a>
+      <p class="side-label">Explorar temas</p>
+      <nav class="nav">
+        <a href="index.html#fundamentos"><span class="nav-num">01</span> Fundamentos</a>
+        <a href="index.html#estandares"><span class="nav-num">02</span> Estándares</a>
+        <a href="index.html#red"><span class="nav-num">03</span> Cómo funciona</a>
+        <a href="index.html#hotspots"><span class="nav-num">04</span> Hotspots</a>
+        <a href="index.html#seguridad"><span class="nav-num">05</span> Seguridad</a>
+        <a href="index.html#ventajas"><span class="nav-num">06</span> Ventajas y límites</a>
+        <a href="index.html#problemas"><span class="nav-num">07</span> Solución de problemas</a>
+        <a href="glosario.html" class="active" aria-current="page"><span class="nav-num">08</span> Glosario</a>
+        <a href="simulacion.html"><span class="nav-num">09</span> Simulación</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <a class="source-link" href="16%20Wifi.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>
+          Consultar PDF de referencia
+        </a>
+        <p class="side-foot">Conceptos y estándares de redes.</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="topbar">
+        <div class="crumb"><a href="index.html">Biblioteca</a> <span aria-hidden="true">/</span> <strong>Glosario</strong></div>
+        <a class="tag" href="index.html">Volver a la wiki</a>
+        <details class="settings-menu">
+          <summary aria-label="Configuración" title="Configuración"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.7a8 8 0 0 1-1.6.9l-.3 1.8h-2.8l-.3-1.8a8 8 0 0 1-1.6-.9l-1.7.7-1.4-2.4 1.4-1.1a7 7 0 0 1 0-1.9l-1.4-1.1 1.4-2.4 1.7.7a8 8 0 0 1 1.6-.9l.3-1.8h2.8l.3 1.8a8 8 0 0 1 1.6.9l1.7-.7 1.4 2.4-1.4 1.1a7 7 0 0 1-.1 1.8Z" transform="translate(-1 -2) scale(1.08)"/></svg><span>Configuración</span></summary>
+          <div class="settings-panel"><label for="site-language">Idioma</label><select id="site-language" data-language-select><option value="es">Español</option><option value="en">English</option><option value="zh-CN">简体中文</option></select><button type="button" class="settings-action" data-print-page>Imprimir / Guardar como PDF</button><a class="settings-action" href="16%20Wifi.pdf" download>Descargar PDF de referencia</a><a class="settings-action" href="wifi-guia.pptx" download>Descargar PowerPoint</a></div>
+        </details>
+      </div>
+
+      <header class="glossary-hero">
+        <p class="eyebrow">Índice de consulta · Redes y conectividad</p>
+        <h1>Conceptos,<br><em>en claro.</em></h1>
+        <p class="hero-copy">Definiciones rápidas de los términos de la wiki y una guía para distinguir los estándares IEEE de redes inalámbricas relacionadas.</p>
+      </header>
+
+      <section class="glossary-tools" aria-label="Buscar y filtrar conceptos">
+        <label class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+          <input class="search" type="search" placeholder="Ej.: 802.16, punto de acceso, WPA3..." aria-label="Buscar conceptos y estándares" id="glossary-search">
+          <span class="shortcut" aria-hidden="true">/</span>
+        </label>
+        <div class="glossary-filters" role="group" aria-label="Filtrar por categoría">
+          <button type="button" data-filter="all" aria-pressed="true">Todo</button>
+          <button type="button" data-filter="standards" aria-pressed="false">Normas IEEE</button>
+          <button type="button" data-filter="network" aria-pressed="false">Redes</button>
+          <button type="button" data-filter="5g" aria-pressed="false">5G</button>
+          <button type="button" data-filter="security" aria-pressed="false">Seguridad</button>
+        </div>
+        <div class="glossary-editor">
+          <p id="editor-status" role="status">Control de demostración: las credenciales pueden inspeccionarse; los cambios se guardan solo en este navegador.</p>
+          <button type="button" class="settings-action" id="editor-login">Iniciar edición</button>
+          <button type="button" class="settings-action" id="editor-logout" hidden>Cerrar sesión de edición</button>
+        </div>
+        <p class="glossary-count" id="glossary-count" aria-live="polite"></p>
+      </section>
+
+      <dialog class="glossary-dialog" id="login-dialog" aria-labelledby="login-title">
+        <form id="login-form">
+          <h2 id="login-title">Acceso de edición</h2>
+          <label for="editor-username">Usuario</label>
+          <input id="editor-username" name="username" autocomplete="username" required>
+          <label for="editor-password">Contraseña</label>
+          <input id="editor-password" name="password" type="password" autocomplete="current-password" required>
+          <p class="editor-error" id="login-error" role="alert" hidden>Usuario o contraseña incorrectos.</p>
+          <div class="dialog-actions">
+            <button type="submit" class="simulation-button primary">Entrar</button>
+            <button type="button" class="simulation-button" data-close-dialog>Cancelar</button>
+          </div>
+        </form>
+      </dialog>
+
+      <dialog class="glossary-dialog" id="edit-dialog" aria-labelledby="edit-title">
+        <form id="edit-form">
+          <h2 id="edit-title">Editar concepto</h2>
+          <label for="edit-term">Término</label>
+          <input id="edit-term" name="term" required maxlength="100">
+          <label for="edit-type">Tipo</label>
+          <input id="edit-type" name="type" required maxlength="100">
+          <label for="edit-definition">Definición</label>
+          <textarea id="edit-definition" name="definition" rows="6" required maxlength="1200"></textarea>
+          <div class="dialog-actions">
+            <button type="submit" class="simulation-button primary">Guardar cambios</button>
+            <button type="button" class="simulation-button" data-close-dialog>Cancelar</button>
+          </div>
+        </form>
+      </dialog>
+
+      <section class="glossary-list" id="glossary-list" aria-label="Definiciones">
+        <article class="glossary-entry" data-category="standards">
+          <span class="glossary-type">Norma IEEE · WLAN</span><h2>IEEE 802.11</h2>
+          <p>Familia de estándares para redes locales inalámbricas. Es la base técnica de Wi-Fi; sus enmiendas incluyen 802.11n, 802.11ac, 802.11ax y 802.11be.</p>
+        </article>
+        <article class="glossary-entry" data-category="standards">
+          <span class="glossary-type">Norma IEEE · WLAN</span><h2>IEEE 802.11a/b/g/n</h2>
+          <p>Enmiendas de distintas generaciones de Wi-Fi. 802.11b y g usan 2.4 GHz; 802.11a usa 5 GHz; 802.11n puede operar en 2.4 y 5 GHz. Las capacidades dependen del equipo y la configuración.</p>
+        </article>
+        <article class="glossary-entry" data-category="standards">
+          <span class="glossary-type">Norma IEEE · Ethernet</span><h2>IEEE 802.3</h2>
+          <p>Familia de estándares de Ethernet, la tecnología de redes de área local cableadas. Complementa a Wi-Fi, pero no es un estándar inalámbrico.</p>
+        </article>
+        <article class="glossary-entry" data-category="standards">
+          <span class="glossary-type">Norma IEEE · Acceso</span><h2>IEEE 802.1X</h2>
+          <p>Método de control de acceso a una red mediante autenticación de dispositivos o usuarios. Se usa en redes empresariales cableadas e inalámbricas; no es un método de cifrado por sí solo.</p>
+        </article>
+        <article class="glossary-entry" data-category="standards">
+          <span class="glossary-type">Norma IEEE · Histórica</span><h2>IEEE 802.9</h2>
+          <p>Proyecto histórico de la familia 802 para redes LAN integradas de voz y datos. No corresponde a Wi-Fi ni es la norma actual para redes inalámbricas.</p>
+        </article>
+        <article class="glossary-entry" data-category="standards">
+          <span class="glossary-type">Norma IEEE · Acceso inalámbrico de banda ancha</span><h2>IEEE 802.16</h2>
+          <p>Familia de estándares para acceso inalámbrico de banda ancha en áreas metropolitanas, asociada históricamente con WiMAX. No es Wi-Fi (802.11), aunque ambas transmiten datos sin cables.</p>
+        </article>
+        <article class="glossary-entry" data-category="standards">
+          <span class="glossary-type">Norma IEEE · Redes personales</span><h2>IEEE 802.15</h2>
+          <p>Familia de estándares para redes inalámbricas de área personal (WPAN), pensadas para comunicaciones de corto alcance. Es distinta de las WLAN de 802.11.</p>
+        </article>
+        <article class="glossary-entry" data-category="standards">
+          <span class="glossary-type">Generación Wi-Fi</span><h2>Wi-Fi 4, 5, 6, 6E y 7</h2>
+          <p>Nombres de generaciones asociadas, respectivamente, con 802.11n, 802.11ac, 802.11ax y 802.11be. Wi-Fi 6E extiende Wi-Fi 6 a la banda de 6 GHz donde esté permitida.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Concepto de red</span><h2>Wi-Fi</h2>
+          <p>Nombre de una tecnología y marca de certificación para productos basados en IEEE 802.11. No es sinónimo de Internet: permite conectar dispositivos a una red local que puede tener salida a Internet.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Concepto de red</span><h2>WLAN</h2>
+          <p>Red de área local inalámbrica (Wireless Local Area Network). Conecta dispositivos en un espacio limitado usando tecnologías de radio como Wi-Fi.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Equipo</span><h2>Punto de acceso (AP)</h2>
+          <p>Equipo o función que permite a los dispositivos Wi-Fi unirse a una red local y puentea el tráfico inalámbrico con la red cableada.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Equipo</span><h2>Router</h2>
+          <p>Dispositivo que dirige tráfico entre redes. En hogares suele integrar router, punto de acceso Wi-Fi, switch y, a veces, módem.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Concepto de red</span><h2>Hotspot</h2>
+          <p>Zona donde se ofrece conexión Wi-Fi. Puede ser privada o pública, abierta o protegida con contraseña y portal de acceso.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Configuración</span><h2>SSID</h2>
+          <p>Nombre que identifica una red Wi-Fi en la lista de redes disponibles. Ocultarlo no reemplaza el cifrado ni vuelve segura una red.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Radio</span><h2>Banda y frecuencia</h2>
+          <p>Wi-Fi utiliza bandas como 2.4, 5 y, en equipos compatibles, 6 GHz. Cada banda tiene características distintas de alcance, capacidad y disponibilidad regional.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Radio</span><h2>Canal</h2>
+          <p>Porción de una banda de radio que usa una red. Elegir canales adecuados puede reducir la interferencia de redes cercanas; la selección automática del router suele ser suficiente en casa.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Tecnología</span><h2>MIMO</h2>
+          <p>Técnica que usa varias antenas para transmitir y recibir datos. Puede mejorar capacidad y rendimiento cuando tanto el punto de acceso como el dispositivo la admiten.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Arquitectura</span><h2>Red mesh</h2>
+          <p>Sistema con varios nodos que cooperan para ampliar cobertura Wi-Fi. Los nodos se enlazan entre sí y presentan una red coordinada a los dispositivos.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Medición</span><h2>Mbps</h2>
+          <p>Megabits por segundo, unidad de tasa de transferencia de datos. No debe confundirse con MB/s (megabytes por segundo): un byte equivale a ocho bits.</p>
+        </article>
+        <article class="glossary-entry" data-category="network">
+          <span class="glossary-type">Medición</span><h2>Latencia</h2>
+          <p>Tiempo que tarda un dato en ir de un punto a otro, normalmente medido en milisegundos. Una conexión rápida puede tener latencia alta y viceversa.</p>
+        </article>
+        <article class="glossary-entry" data-category="security">
+          <span class="glossary-type">Seguridad · Obsoleto</span><h2>WEP</h2>
+          <p>Protocolo antiguo de seguridad para Wi-Fi. Sus debilidades permiten vulnerarlo con facilidad; no debe utilizarse.</p>
+        </article>
+        <article class="glossary-entry" data-category="security">
+          <span class="glossary-type">Seguridad · Evitar</span><h2>WPA y TKIP</h2>
+          <p>WPA fue una solución transitoria y TKIP su mecanismo de protección. Ambos se consideran obsoletos para redes actuales y deben evitarse.</p>
+        </article>
+        <article class="glossary-entry" data-category="security">
+          <span class="glossary-type">Seguridad · Recomendado</span><h2>WPA2, AES y CCMP</h2>
+          <p>WPA2 con AES/CCMP sigue siendo una opción segura cuando WPA3 no está disponible. Conviene evitar el modo mixto que habilita TKIP.</p>
+        </article>
+        <article class="glossary-entry" data-category="security">
+          <span class="glossary-type">Seguridad · Recomendado</span><h2>WPA3</h2>
+          <p>Generación más reciente de seguridad Wi-Fi para redes domésticas y personales. Se recomienda cuando es compatible con el router y los dispositivos.</p>
+        </article>
+        <article class="glossary-entry" data-category="security">
+          <span class="glossary-type">Seguridad</span><h2>Firewall</h2>
+          <p>Componente que aplica reglas para permitir o bloquear tráfico de red. Complementa el cifrado Wi-Fi, pero cumple una función diferente.</p>
+        </article>
+        <article class="glossary-entry" data-category="security">
+          <span class="glossary-type">Privacidad</span><h2>VPN</h2>
+          <p>Conexión cifrada entre un dispositivo y un servicio VPN. Puede proteger parte del tráfico frente a la red local, pero no garantiza que todos los sitios o servicios sean seguros.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Antecedentes · Redes móviles</span><h2>Antecedentes de 5G</h2>
+          <p>La 5G evolucionó a partir de generaciones móviles anteriores: 1G analógica, 2G digital, 3G de datos móviles y 4G LTE de banda ancha IP. La UIT definió objetivos IMT-2020 y 3GPP estandarizó 5G NR desde Release 15; su despliegue comenzó comercialmente alrededor de 2019.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Estándar · Radio móvil</span><h2>5G NR</h2>
+          <p>5G New Radio es la interfaz de radio definida por 3GPP para redes 5G. Usa recursos de tiempo y frecuencia configurables, y admite distintas bandas, anchos de canal y esquemas de transmisión.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Arquitectura</span><h2>5G NSA y SA</h2>
+          <p>NSA (Non-Standalone) combina radio 5G con una infraestructura LTE existente, normalmente con núcleo 4G. SA (Standalone) conecta la radio 5G a un núcleo 5G y habilita funciones nativas como segmentación de red; la disponibilidad depende del operador.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Radio · Espectro</span><h2>Espectro radioeléctrico</h2>
+          <p>Conjunto de frecuencias de ondas electromagnéticas que pueden utilizarse para comunicaciones inalámbricas. Los gobiernos asignan bandas y licencias; las reglas de uso, potencia y canales varían por país para coordinar servicios y reducir interferencias.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Radio · Bandas</span><h2>Bandas 5G: baja, media y milimétrica</h2>
+          <p>Las frecuencias bajas suelen cubrir áreas amplias; las medias equilibran cobertura y capacidad; las bandas milimétricas ofrecen canales anchos, pero su alcance y penetración en edificios son menores. Las bandas concretas autorizadas dependen del país y del operador.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Radio · Capacidad</span><h2>Ancho de banda de canal</h2>
+          <p>Rango de frecuencias que ocupa un canal, medido en hertz. En 5G NR puede configurarse con distintos anchos según la banda y el equipo. Un canal más ancho puede transportar más datos, pero no equivale por sí solo a mayor velocidad: también importan la señal, la carga y la asignación de recursos.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Modulación</span><h2>QPSK y QAM</h2>
+          <p>Esquemas que representan bits mediante símbolos de radio. 5G NR puede usar QPSK y QAM de orden superior, como 16-QAM, 64-QAM o 256-QAM, cuando las condiciones lo permiten. Los órdenes mayores transportan más bits por símbolo, pero requieren una señal de mejor calidad.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Multiplexación · Radio</span><h2>OFDM y OFDMA</h2>
+          <p>OFDM divide la transmisión en subportadoras ortogonales que transportan datos en paralelo. 5G NR usa formas de onda basadas en OFDM; al asignar grupos de subportadoras a distintos usuarios en tiempo y frecuencia se comparte eficientemente el canal, en un esquema de acceso múltiple por división de frecuencia ortogonal.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Duplexación</span><h2>TDD y FDD</h2>
+          <p>Métodos para separar la transmisión y recepción. FDD usa frecuencias distintas para cada sentido; TDD comparte una frecuencia y alterna intervalos de tiempo. La banda asignada y la configuración de la red determinan cuál se emplea.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Antenas · MIMO</span><h2>Massive MIMO y beamforming</h2>
+          <p>Massive MIMO emplea numerosas antenas para atender varios flujos y usuarios. El beamforming ajusta la fase y amplitud de las señales para concentrar energía en ciertas direcciones, mejorando potencialmente cobertura y capacidad; no elimina obstáculos ni garantiza una velocidad concreta.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Acceso radioeléctrico</span><h2>gNB</h2>
+          <p>Nombre de la estación base 5G NR que proporciona cobertura de radio y conecta los dispositivos con la red de acceso. Puede incluir radios y antenas en el sitio y funciones de procesamiento distribuidas o centralizadas.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Infraestructura</span><h2>NG-RAN</h2>
+          <p>Red de acceso radioeléctrico de nueva generación de 5G. Incluye gNB conectados entre sí y al núcleo 5G mediante interfaces normalizadas; sus funciones pueden distribuirse entre unidades centralizadas y distribuidas.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Núcleo de red</span><h2>5GC</h2>
+          <p>5G Core es el núcleo de paquetes de una red 5G. Gestiona registro y movilidad, sesiones de datos, políticas y conexión con redes externas mediante funciones modulares comunicadas por interfaces definidas por 3GPP.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Núcleo · Control</span><h2>AMF y SMF</h2>
+          <p>Funciones del núcleo 5G: AMF gestiona acceso y movilidad del equipo; SMF administra sesiones de conectividad y configura el encaminamiento de datos junto con otras funciones del núcleo. Son funciones de red, no protocolos de radio.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Núcleo · Plano de usuario</span><h2>UPF</h2>
+          <p>La User Plane Function procesa y reenvía el tráfico de usuario entre la red de acceso y redes de datos. Puede ubicarse cerca de los usuarios para reducir el recorrido de ciertos datos, según la arquitectura del operador.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Protocolos · Interfaz de radio</span><h2>Protocolos de acceso 5G</h2>
+          <p>En la interfaz NR, RRC controla la conexión de radio; PDCP, RLC y MAC procesan y organizan datos en capas; PHY transmite símbolos por radio. NAS intercambia señalización entre el dispositivo y el núcleo para registro y movilidad. Cada protocolo cumple una función distinta.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Transporte · Infraestructura</span><h2>Fronthaul y backhaul</h2>
+          <p>Enlaces de transporte que conectan componentes de la red móvil. Fronthaul puede enlazar radios con unidades de procesamiento distribuidas; backhaul lleva el tráfico desde estaciones base hacia el núcleo y otras redes. Pueden usar fibra, microondas u otros medios.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Arquitectura · Servicios</span><h2>Network slicing</h2>
+          <p>Función de 5G que permite configurar segmentos lógicos de una infraestructura compartida con políticas y recursos distintos para ciertos servicios. No crea redes físicas independientes ni garantiza por sí sola aislamiento absoluto o calidad determinada.</p>
+        </article>
+      </section>
+      <p class="glossary-empty" id="glossary-empty" role="status">No hay conceptos que coincidan. Prueba otra búsqueda o categoría.</p>
+
+      <footer class="footer"><span>5G, en claro · Glosario</span><span>Autores: Daniela Aldheni, Aline Celeste, Cesar Gabriel, Juan Aldrin y Pablo</span></footer>
+    </main>
+  </div>
+  <script>
+    const searchInput = document.querySelector('#glossary-search');
+    const entries = [...document.querySelectorAll('.glossary-entry')];
+    const filterButtons = [...document.querySelectorAll('.glossary-filters button')];
+    const resultCount = document.querySelector('#glossary-count');
+    const emptyState = document.querySelector('#glossary-empty');
+    const loginDialog = document.querySelector('#login-dialog');
+    const editDialog = document.querySelector('#edit-dialog');
+    const loginForm = document.querySelector('#login-form');
+    const editForm = document.querySelector('#edit-form');
+    const editorLogin = document.querySelector('#editor-login');
+    const editorLogout = document.querySelector('#editor-logout');
+    const editorStatus = document.querySelector('#editor-status');
+    const storageKey = 'wifi-wiki-glossary-edits-v1';
+    let editingEntry;
+    let activeFilter = 'all';
+    let editingEnabled = false;
+
+    const normalize = value => value.toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    function readSavedEdits() {
+      try {
+        return JSON.parse(localStorage.getItem(storageKey) || '{}');
+      } catch {
+        return {};
+      }
+    }
+
+    const savedEdits = readSavedEdits();
+    entries.forEach((entry, index) => {
+      entry.dataset.termId = `term-${index}`;
+      const saved = savedEdits[entry.dataset.termId];
+      if (saved) {
+        entry.querySelector('h2').textContent = saved.term;
+        entry.querySelector('.glossary-type').textContent = saved.type;
+        entry.querySelector('p').textContent = saved.definition;
+      }
+
+      const editButton = document.createElement('button');
+      editButton.type = 'button';
+      editButton.className = 'glossary-edit-button';
+      editButton.textContent = 'Editar';
+      editButton.hidden = true;
+      editButton.setAttribute('aria-label', `Editar ${entry.querySelector('h2').textContent}`);
+      editButton.addEventListener('click', () => openEditDialog(entry));
+      entry.append(editButton);
+    });
+
+    function updateResults() {
+      const query = normalize(searchInput.value.trim());
+      let visibleCount = 0;
+      for (const entry of entries) {
+        const matchesText = normalize(entry.textContent).includes(query);
+        const matchesFilter = activeFilter === 'all' || entry.dataset.category === activeFilter;
+        entry.hidden = !(matchesText && matchesFilter);
+        if (!entry.hidden) visibleCount++;
+      }
+      const countLabel = visibleCount === 1 ? 'concepto' : 'conceptos';
+      resultCount.textContent = `${visibleCount} ${window.translateText ? window.translateText(countLabel) : countLabel}`;
+      emptyState.classList.toggle('visible', visibleCount === 0);
+    }
+
+    function updateEditorLanguage() {
+      const translate = text => window.translateText ? window.translateText(text) : text;
+      editorStatus.textContent = translate(editingEnabled
+        ? 'Control de demostración activo: las credenciales pueden inspeccionarse; los cambios se guardan solo en este navegador.'
+        : 'Control de demostración: las credenciales pueden inspeccionarse; los cambios se guardan solo en este navegador.');
+      editorLogin.textContent = translate('Iniciar edición');
+      editorLogout.textContent = translate('Cerrar sesión de edición');
+      document.querySelectorAll('.glossary-edit-button').forEach(button => {
+        const term = button.closest('.glossary-entry').querySelector('h2').textContent;
+        button.textContent = translate('Editar');
+        button.setAttribute('aria-label', `${translate('Editar')} ${term}`);
+      });
+    }
+
+    function setEditingEnabled(enabled) {
+      editingEnabled = enabled;
+      editorLogin.hidden = enabled;
+      editorLogout.hidden = !enabled;
+      updateEditorLanguage();
+      document.querySelectorAll('.glossary-edit-button').forEach(button => {
+        button.hidden = !enabled;
+      });
+    }
+
+    function openEditDialog(entry) {
+      if (!editingEnabled) return;
+      editingEntry = entry;
+      editForm.elements.term.value = entry.querySelector('h2').textContent;
+      editForm.elements.type.value = entry.querySelector('.glossary-type').textContent;
+      editForm.elements.definition.value = entry.querySelector('p').textContent;
+      editDialog.showModal();
+    }
+
+    function saveEdits() {
+      const edits = Object.fromEntries(entries.map(entry => [entry.dataset.termId, {
+        term: entry.querySelector('h2').textContent,
+        type: entry.querySelector('.glossary-type').textContent,
+        definition: entry.querySelector('p').textContent
+      }]));
+      localStorage.setItem(storageKey, JSON.stringify(edits));
+    }
+
+    editorLogin.addEventListener('click', () => {
+      document.querySelector('#login-error').hidden = true;
+      loginDialog.showModal();
+    });
+
+    editorLogout.addEventListener('click', () => setEditingEnabled(false));
+
+    loginForm.addEventListener('submit', event => {
+      event.preventDefault();
+      if (loginForm.elements.username.value === 'redes' && loginForm.elements.password.value === 'userlabnet') {
+        loginForm.reset();
+        loginDialog.close();
+        setEditingEnabled(true);
+      } else {
+        document.querySelector('#login-error').hidden = false;
+      }
+    });
+
+    editForm.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!editingEnabled || !editingEntry) return;
+      editingEntry.querySelector('h2').textContent = editForm.elements.term.value.trim();
+      editingEntry.querySelector('.glossary-type').textContent = editForm.elements.type.value.trim();
+      editingEntry.querySelector('p').textContent = editForm.elements.definition.value.trim();
+      saveEdits();
+      updateEditorLanguage();
+      updateResults();
+      editDialog.close();
+    });
+
+    document.querySelectorAll('[data-close-dialog]').forEach(button => {
+      button.addEventListener('click', () => button.closest('dialog').close());
+    });
+
+    document.addEventListener('site-language-applied', updateResults);
+
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+      activeFilter = button.dataset.filter;
+      filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      updateResults();
+    }));
+
+    searchInput.addEventListener('input', updateResults);
+    document.addEventListener('site-language-applied', updateEditorLanguage);
+    document.addEventListener('keydown', event => {
+      if (event.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        event.preventDefault();
+        searchInput.focus();
+      }
+      if (event.key === 'Escape' && document.activeElement === searchInput) {
+        searchInput.value = '';
+        updateResults();
+        searchInput.blur();
+      }
+    });
+
+    searchInput.value = new URLSearchParams(window.location.search).get('q') || '';
+    updateResults();
+  </script>
+  <script src="settings.js"></script>
+</body>
+</html>
