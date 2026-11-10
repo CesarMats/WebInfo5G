@@ -237,11 +237,19 @@
       stepLabel.textContent = translate(`ETAPA ${currentStage + 1}`);
       stepTitle.textContent = translate(stages[currentStage].title);
       stepDescription.textContent = translate(stages[currentStage].description);
-      stepCount.textContent = document.documentElement.lang === 'en'
-        ? `Step ${currentStage + 1} of ${stages.length}`
-        : `Paso ${currentStage + 1} de ${stages.length}`;
+      const currentStep = currentStage + 1;
+      const language = document.documentElement.lang;
+      stepCount.textContent = language === 'en'
+        ? `Step ${currentStep} of ${stages.length}`
+        : language === 'zh-CN'
+          ? `第 ${currentStep} 步，共 ${stages.length} 步`
+          : `Paso ${currentStep} de ${stages.length}`;
       progress.value = currentStage + 1;
-      progress.textContent = `${currentStage + 1} ${document.documentElement.lang === 'en' ? 'of' : 'de'} ${stages.length}`;
+      progress.textContent = language === 'en'
+        ? `${currentStep} of ${stages.length}`
+        : language === 'zh-CN'
+          ? `${currentStep}/${stages.length}`
+          : `${currentStep} de ${stages.length}`;
       previousButton.disabled = currentStage === 0;
       nextButton.disabled = currentStage === stages.length - 1;
       if (currentStage === stages.length - 1) stopPlayback();
