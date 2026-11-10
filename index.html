@@ -20,17 +20,17 @@
         <a href="#fundamentos" class="active"><span class="nav-num">01</span> Fundamentos</a>
         <a href="#estandares"><span class="nav-num">02</span> Estándares</a>
         <a href="#red"><span class="nav-num">03</span> Cómo funciona</a>
-        <a href="#hotspots"><span class="nav-num">04</span> Hotspots</a>
-        <a href="#seguridad"><span class="nav-num">05</span> Seguridad</a>
+        <a href="#hotspots"><span class="nav-num">04</span> Radio y espectro</a>
+        <a href="#seguridad"><span class="nav-num">05</span> Seguridad 5G</a>
         <a href="#ventajas"><span class="nav-num">06</span> Ventajas y límites</a>
         <a href="#problemas"><span class="nav-num">07</span> Solución de problemas</a>
         <a href="glosario.html"><span class="nav-num">08</span> Glosario</a>
         <a href="simulacion.html"><span class="nav-num">09</span> Simulación</a>
       </nav>
       <div class="sidebar-bottom">
-        <a class="source-link" href="16%20Wifi.pdf" target="_blank" rel="noopener">
+        <a class="source-link" href="https://www.3gpp.org/technologies/5g-system-overview" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>
-          Consultar PDF de referencia
+          Fuentes oficiales sobre 5G
         </a>
         <p class="side-foot">Una guía para entender las redes móviles 5G.</p>
       </div>
@@ -38,7 +38,7 @@
 
     <main class="content" id="inicio">
       <div class="topbar">
-        <div class="crumb">Biblioteca <span aria-hidden="true">/</span> <strong>Redes inalámbricas</strong></div>
+        <div class="crumb">Biblioteca <span aria-hidden="true">/</span> <strong>Redes móviles · 5G</strong></div>
         <label class="search-wrap">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
           <input class="search" type="search" placeholder="Buscar en la wiki..." aria-label="Buscar temas en la wiki" id="wiki-search">
@@ -52,8 +52,8 @@
               <option value="es">Español</option><option value="en">English</option><option value="zh-CN">简体中文</option>
             </select>
             <button type="button" class="settings-action" data-print-page>Imprimir / Guardar como PDF</button>
-            <a class="settings-action" href="16%20Wifi.pdf" download>Descargar PDF de referencia</a>
-            <a class="settings-action" href="wifi-guia.pptx" download>Descargar PowerPoint</a>
+            <a class="settings-action" href="https://www.3gpp.org/technologies/5g-system-overview" target="_blank" rel="noopener noreferrer">Arquitectura 5G · 3GPP</a>
+            <a class="settings-action" href="https://www.itu.int/rec/R-REC-M.2150/en" target="_blank" rel="noopener noreferrer">IMT-2020 · ITU</a>
           </div>
         </details>
       </div>
@@ -66,118 +66,119 @@
         </div>
         <div class="hero-visual" aria-hidden="true">
           <span class="signal-field"></span>
-          <span class="device-tag tag-one">radio · 2.4 / 5 / 6 GHz</span>
+          <span class="device-tag tag-one">5G NR · radio móvil</span>
           <div class="router">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20a22 22 0 0 1 30 0M14 25a15 15 0 0 1 20 0m-14 5a6 6 0 0 1 8 0"/><circle cx="24" cy="35" r="1.6" fill="currentColor"/></svg>
             <span class="router-dots"><i></i><i></i><i></i></span>
           </div>
-          <span class="device-tag tag-two">conexión sin cables</span>
+          <span class="device-tag tag-two">red móvil · extremo a extremo</span>
         </div>
       </header>
 
       <div class="overview" aria-label="En pocas palabras">
-        <div class="overview-item"><strong>5G NR</strong><span>La interfaz de radio de las redes 5G</span></div>
-        <div class="overview-item"><strong>Espectro y modulación</strong><span>Recursos de radio que transportan los datos</span></div>
-        <div class="overview-item"><strong>Red de extremo a extremo</strong><span>Radio, transporte y núcleo trabajan coordinados</span></div>
+        <div class="overview-item"><strong>5G NR</strong><span>La interfaz de radio de la quinta generación móvil</span></div>
+        <div class="overview-item"><strong>NG-RAN + 5GC</strong><span>Acceso radio y núcleo de la red 5G</span></div>
+        <div class="overview-item"><strong>eMBB · URLLC · mMTC</strong><span>Familias de necesidades que 5G busca atender</span></div>
       </div>
 
       <div class="empty-state" id="empty-state">No encontramos temas que coincidan. Prueba con otra palabra.</div>
 
-      <section class="wiki-section" id="fundamentos" data-search="fundamentos wifi wi-fi wireless fidelity red inalámbrica wlan historia">
+      <section class="wiki-section" id="fundamentos" data-search="fundamentos 5g quinta generación telefonía móvil 3gpp imt-2020 red celular">
         <div class="section-heading"><span class="section-index">01</span><h2>Fundamentos</h2></div>
-        <p class="section-intro">Wi-Fi permite que teléfonos, computadoras y otros equipos intercambien datos por radio en una red local, sin conectarse físicamente entre sí.</p>
+        <p class="section-intro">5G es la quinta generación de sistemas móviles celulares: conecta dispositivos por radio con una red de acceso y un núcleo que gestionan sesiones, movilidad y tráfico de datos.</p>
         <div class="columns">
           <div>
-            <h3>Wi-Fi y el estándar 802.11</h3>
-            <p class="text">Wi-Fi es el nombre con el que se conoce una tecnología basada en los estándares IEEE 802.11 para redes locales inalámbricas (WLAN). El router o punto de acceso crea una red; los dispositivos compatibles se conectan a ella para comunicarse entre sí y, normalmente, acceder a Internet.</p>
+            <h3>5G NR y 3GPP</h3>
+            <p class="text">5G NR (New Radio) es la interfaz radioeléctrica de acceso 5G especificada por 3GPP. El sistema completo también incluye la red de acceso NG-RAN, el núcleo 5GC y protocolos para movilidad, sesiones y conexión con redes de datos.</p>
           </div>
           <div>
-            <h3>Un poco de historia</h3>
-            <p class="text">El IEEE publicó la primera versión de 802.11 en 1997. En 1999 aparecieron 802.11b, en 2.4 GHz, y 802.11a, en 5 GHz. Desde entonces la familia ha evolucionado para mejorar velocidad, capacidad, eficiencia y funcionamiento en lugares con muchos dispositivos.</p>
+            <h3>Qué significa “5G”</h3>
+            <p class="text">No es solo una velocidad ni una frecuencia concreta: identifica una generación de tecnologías y estándares móviles. Las capacidades disponibles varían según el despliegue, el espectro, el equipo y las condiciones de uso.</p>
           </div>
         </div>
-        <p class="note"><strong>Nota:</strong> “Wireless Fidelity” aparece como expansión de Wi-Fi en el PDF de referencia, pero Wi-Fi es una marca; el nombre del estándar técnico es IEEE 802.11.</p>
+        <p class="note"><strong>Distinción:</strong> 5G es una red móvil de operador; Wi-Fi es una tecnología distinta de red local inalámbrica. Un teléfono puede usar ambas, pero no son sinónimos.</p>
       </section>
 
-      <section class="wiki-section" id="estandares" data-search="estándares norma 802.11b 802.11a 802.11g 802.11n wifi 4 5 6 6e 7 frecuencia generaciones">
-        <div class="section-heading"><span class="section-index">02</span><h2>Estándares y generaciones</h2></div>
-        <p class="section-intro">Las generaciones más nuevas suelen ofrecer mayor capacidad y eficiencia. La velocidad real depende también del router, el dispositivo, la distancia, las interferencias y el servicio de Internet.</p>
+      <section class="wiki-section" id="estandares" data-search="estándares 3gpp release 15 release 16 release 17 release 18 5g advanced 5g nr imt-2020">
+        <div class="section-heading"><span class="section-index">02</span><h2>Estándares y evolución</h2></div>
+        <p class="section-intro">La tecnología 5G se especifica por versiones (Releases) de 3GPP. Release 15 estableció la primera fase 5G; las siguientes incorporan mejoras y nuevas capacidades. La interoperabilidad y disponibilidad dependen de la versión implementada por cada red y dispositivo.</p>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>Generación Wi-Fi</th><th>Estándar IEEE</th><th>Bandas habituales</th><th>Enfoque</th></tr></thead>
+            <thead><tr><th>Elemento</th><th>Función</th><th>Ejemplos de términos</th><th>Qué tener en cuenta</th></tr></thead>
             <tbody>
-              <tr><td>Wi-Fi 4</td><td>802.11n</td><td>2.4 y 5 GHz</td><td>Uso de varias antenas (MIMO)</td></tr>
-              <tr><td>Wi-Fi 5</td><td>802.11ac</td><td>5 GHz</td><td>Mayor capacidad y velocidad</td></tr>
-              <tr><td>Wi-Fi 6</td><td>802.11ax</td><td>2.4 y 5 GHz</td><td>Más eficiencia en redes concurridas</td></tr>
-              <tr><td>Wi-Fi 6E</td><td>802.11ax</td><td>2.4, 5 y 6 GHz</td><td>Acceso a la banda de 6 GHz donde esté permitida</td></tr>
-              <tr><td>Wi-Fi 7</td><td>802.11be</td><td>2.4, 5 y 6 GHz*</td><td>Más ancho de banda y menor latencia potencial</td></tr>
+              <tr><td>5G NR</td><td>Enlace radio entre el equipo y la red de acceso</td><td>UE, gNB, NG-RAN</td><td>Bandas y funciones dependen de la red y del equipo</td></tr>
+              <tr><td>5G Core (5GC)</td><td>Gestiona funciones de red, sesiones y tráfico</td><td>AMF, SMF, UPF</td><td>Arquitectura de núcleo propia de 5G SA</td></tr>
+              <tr><td>NSA</td><td>Despliegue 5G que se apoya en infraestructura LTE existente</td><td>NR + LTE / EPC</td><td>La experiencia y arquitectura difieren de SA</td></tr>
+              <tr><td>SA</td><td>Acceso 5G conectado al núcleo 5G</td><td>NR + 5GC</td><td>Requiere soporte de red, dispositivo y operador</td></tr>
+              <tr><td>5G-Advanced</td><td>Nombre asociado a la evolución 5G en Releases posteriores</td><td><a href="https://www.3gpp.org/specifications-technologies/releases/release-18" target="_blank" rel="noopener noreferrer">3GPP Release 18</a></td><td>No implica que todas sus funciones estén desplegadas</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="table-note">* La disponibilidad de bandas y canales depende del país y del equipo. Las cifras teóricas máximas no equivalen a la velocidad que recibirá cada dispositivo.</p>
-        <p class="text generation-note">El material de referencia también compara 802.11b, 802.11a y 802.11g, generaciones anteriores que hoy pueden aparecer en equipos heredados. Su alcance y rendimiento dependen de las condiciones; los valores orientativos del PDF no son garantías de cobertura.</p>
+        <p class="table-note">La UIT mantiene la recomendación IMT-2020 con especificaciones de interfaces radio terrestres. Los nombres comerciales “5G” o “5G+” no garantizan por sí solos una velocidad, latencia o función concreta.</p>
       </section>
 
-      <section class="wiki-section" id="red" data-search="red router punto acceso access point ap cliente dispositivo adaptador modem internet como funciona señal radio">
-        <div class="section-heading"><span class="section-index">03</span><h2>Cómo funciona una red</h2></div>
-        <p class="section-intro">La conexión no es solo “Internet por el aire”: cada equipo cumple una función dentro del recorrido de los datos.</p>
-        <div class="network-diagram" aria-label="Recorrido desde Internet, pasando por el router, hasta los dispositivos inalámbricos">
-          <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9a14 14 0 0 1 18 0M6 12a9 9 0 0 1 12 0m-9 3a4 4 0 0 1 6 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg><strong>Internet</strong><small>La conexión del proveedor</small></div>
+      <section class="wiki-section" id="red" data-search="red gnb ng-ran 5gc núcleo core ue dispositivo usuario internet datos señal">
+        <div class="section-heading"><span class="section-index">03</span><h2>Cómo funciona una red 5G</h2></div>
+        <p class="section-intro">Los datos pasan por varios componentes coordinados. La ruta es conceptual: la arquitectura real incluye más funciones de señalización, autenticación, movilidad y gestión de sesiones.</p>
+        <div class="network-diagram" aria-label="Recorrido desde un dispositivo móvil, por la red de acceso 5G y el núcleo, hasta una red de datos">
+          <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 5h4m-3 14h2"/></svg><strong>Dispositivo (UE)</strong><small>Teléfono, módem o equipo IoT</small></div>
           <span class="arrow" aria-hidden="true">→</span>
-          <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="10" width="18" height="9" rx="1"/><path d="M7 10 5 4m12 6 2-6M7 15h.01M11 15h.01M15 15h.01"/></svg><strong>Router / punto de acceso</strong><small>Enruta datos y emite la señal Wi-Fi</small></div>
+          <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 5 21m7-18 7 18M8 13h8M6.5 17h11"/></svg><strong>Antena 5G / gNB</strong><small>Acceso radio NR (NG-RAN)</small></div>
           <span class="arrow" aria-hidden="true">→</span>
-          <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="13" rx="1"/><path d="M8 21h8m-4-4v4"/></svg><strong>Dispositivos</strong><small>Móvil, portátil, TV y más</small></div>
+          <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8m-8 5h8m-8 5h5"/></svg><strong>Núcleo 5G (5GC)</strong><small>Controla sesiones y enruta tráfico</small></div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9a14 14 0 0 1 18 0M6 12a9 9 0 0 1 12 0m-9 3a4 4 0 0 1 6 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/></svg><strong>Red de datos</strong><small>Internet o servicios privados</small></div>
         </div>
         <div class="columns">
-          <div><h3>La señal</h3><p class="text">El punto de acceso transmite y recibe datos mediante ondas de radio. Los dispositivos cercanos se asocian a la red y envían sus propios datos de vuelta. Paredes, distancia, interferencias y la banda utilizada afectan a la cobertura y al rendimiento.</p></div>
-          <div><h3>Elementos principales</h3><p class="text">El router suele combinar punto de acceso, funciones de enrutamiento y, a menudo, módem. Cada teléfono o computadora necesita un adaptador Wi-Fi, normalmente integrado. Un firewall y el cifrado ayudan a proteger la red.</p></div>
+          <div><h3>NSA y SA</h3><p class="text">En NSA (Non-Standalone), NR puede desplegarse junto con LTE y apoyarse en el núcleo 4G. En SA (Standalone), el acceso NR se conecta al 5GC. Qué modo está disponible depende del operador y del lugar.</p></div>
+          <div><h3>Señal y datos</h3><p class="text">El gNB transmite y recibe por radio; el núcleo gestiona funciones de red y conecta sesiones con redes de datos. La movilidad entre celdas busca mantener el servicio mientras el equipo se desplaza, pero la cobertura no es continua en todas partes.</p></div>
         </div>
       </section>
 
-      <section class="wiki-section" id="hotspots" data-search="hotspot punto acceso público aeropuerto hotel restaurante café cafeteria librería centro comercial red pública">
-        <div class="section-heading"><span class="section-index">04</span><h2>Hotspots y redes públicas</h2></div>
-        <p class="section-intro">Un hotspot es un lugar donde se ofrece acceso a una red Wi-Fi. Puede ser gratuito, requerir una contraseña o pedir iniciar sesión en una página de bienvenida.</p>
+      <section class="wiki-section" id="hotspots" data-search="radio espectro frecuencias bandas baja media alta sub-6 ghz milimétrica massive mimo beamforming">
+        <div class="section-heading"><span class="section-index">04</span><h2>Radio, espectro y cobertura</h2></div>
+        <p class="section-intro">5G utiliza bandas de espectro autorizadas para servicios móviles. No existe una única frecuencia 5G mundial: las bandas disponibles cambian según el país y el operador.</p>
         <div class="device-grid">
-          <div class="device"><strong>Aeropuertos y hoteles</strong><p>Conectividad para viajeros y huéspedes.</p></div>
-          <div class="device"><strong>Cafés y restaurantes</strong><p>Acceso para clientes en espacios de uso compartido.</p></div>
-          <div class="device"><strong>Bibliotecas y comercios</strong><p>Redes disponibles en espacios públicos o de servicio.</p></div>
+          <div class="device"><strong>Bandas bajas</strong><p>Propagación y cobertura amplia; el ancho de banda disponible puede ser más limitado.</p></div>
+          <div class="device"><strong>Bandas medias</strong><p>Equilibrio entre cobertura y capacidad; son una opción habitual para ampliar 5G.</p></div>
+          <div class="device"><strong>Bandas altas</strong><p>Pueden ofrecer mucho ancho de banda, pero su alcance y penetración suelen ser menores.</p></div>
         </div>
-        <p class="note"><strong>Ten presente:</strong> que una red sea pública no significa que sea segura o legítima. Confirma su nombre con el establecimiento y evita redes abiertas desconocidas.</p>
+        <p class="note"><strong>Tecnologías de radio:</strong> MIMO masivo y beamforming permiten gestionar múltiples señales y dirigir energía radioeléctrica hacia los equipos. Su uso y beneficio dependen de la banda, el sitio, el equipo y la configuración de red.</p>
       </section>
 
-      <section class="wiki-section" id="seguridad" data-search="seguridad wep wpa wpa2 wpa3 aes tkip rc4 contraseña router firmware red pública vpn">
-        <div class="section-heading"><span class="section-index">05</span><h2>Seguridad Wi-Fi</h2></div>
-        <p class="section-intro">El cifrado protege el tráfico entre tus dispositivos y el punto de acceso. El PDF describe métodos históricos; para una red actual, elige el nivel más robusto que admitan tus equipos.</p>
+      <section class="wiki-section" id="seguridad" data-search="seguridad 5g sim usim autenticación cifrado integridad privacidad amenazas">
+        <div class="section-heading"><span class="section-index">05</span><h2>Seguridad en 5G</h2></div>
+        <p class="section-intro">La seguridad 5G se diseña en varias capas: autenticación del abonado, protección de señalización, cifrado e integridad en los enlaces definidos por el estándar. No elimina todos los riesgos ni sustituye las actualizaciones y controles del operador.</p>
         <div class="security-list">
-          <div class="security-item"><span class="level">Obsoleto</span><h3>WEP</h3><p>Protección rota y fácil de vulnerar. No debe utilizarse.</p></div>
-          <div class="security-item"><span class="level">Evitar</span><h3>WPA / TKIP</h3><p>Mejora histórica sobre WEP, pero ya no se considera una opción segura.</p></div>
-          <div class="security-item recommended"><span class="level">Recomendado</span><h3>WPA3 o WPA2-AES</h3><p>Prefiere WPA3; WPA2 con AES/CCMP es una alternativa si el equipo no admite WPA3.</p></div>
+          <div class="security-item"><span class="level">Identidad</span><h3>USIM / eSIM</h3><p>Credenciales de abonado participan en los procedimientos de autenticación con la red.</p></div>
+          <div class="security-item"><span class="level">Protección</span><h3>Cifrado</h3><p>Ayuda a proteger la confidencialidad de comunicaciones en los tramos cubiertos por el estándar.</p></div>
+          <div class="security-item recommended"><span class="level">Protección</span><h3>Integridad</h3><p>Permite detectar modificaciones no autorizadas en determinados mensajes de control.</p></div>
         </div>
         <div class="columns security-advice">
-          <div><h3>En tu router</h3><ul class="check-list"><li>Usa una contraseña larga y única para la red.</li><li>Cambia la contraseña de administración predeterminada.</li><li>Activa WPA3 o WPA2-AES y desactiva WEP/TKIP.</li></ul></div>
-          <div><h3>En redes públicas</h3><ul class="check-list"><li>Comprueba el nombre de la red con el local.</li><li>Mantén el sistema y las aplicaciones actualizados.</li><li>Desactiva la conexión automática a redes abiertas.</li></ul></div>
+          <div><h3>Qué aporta la red</h3><ul class="check-list"><li>Autenticación del abonado y de la red conforme al procedimiento utilizado.</li><li>Protección criptográfica para señalización y datos según el enlace y la configuración.</li><li>Separación y control de funciones en la arquitectura del núcleo.</li></ul></div>
+          <div><h3>Qué debe hacer el usuario</h3><ul class="check-list"><li>Mantener actualizado el sistema operativo del teléfono.</li><li>Usar bloqueo de pantalla y proteger la cuenta del operador.</li><li>Reportar pérdida de SIM/eSIM al operador y revisar sus opciones de seguridad.</li></ul></div>
         </div>
-        <div class="callout"><h3>Una nota sobre la privacidad</h3><p>El cifrado de la red no sustituye HTTPS ni protege todos los datos de tu dispositivo. Una VPN puede proteger parte del tráfico frente a la red local, pero no convierte en confiable una red sospechosa ni evita todos los riesgos.</p></div>
+        <div class="callout"><h3>Un límite importante</h3><p>Las protecciones dependen de la implementación, la configuración, el tramo de red y el dispositivo. El cifrado móvil no garantiza anonimato ni evita fraudes, malware o fallos de seguridad fuera de la red de acceso.</p></div>
       </section>
 
-      <section class="wiki-section" id="ventajas" data-search="ventajas limitaciones beneficios cables movilidad cobertura interferencia consumo batería velocidad capacidad">
-        <div class="section-heading"><span class="section-index">06</span><h2>Ventajas y límites</h2></div>
+      <section class="wiki-section" id="ventajas" data-search="ventajas límites emmb urllc mmtc banda ancha baja latencia internet de las cosas industria">
+        <div class="section-heading"><span class="section-index">06</span><h2>Capacidades, usos y límites</h2></div>
         <div class="columns">
-          <div><h3>Lo que aporta</h3><p class="text">Conecta varios dispositivos sin cableado hasta cada uno, facilita la movilidad dentro del área de cobertura y simplifica ampliar una red. La instalación suele ser rápida cuando ya existe una conexión a Internet.</p></div>
-          <div><h3>Lo que conviene considerar</h3><p class="text">La señal pierde fuerza con la distancia y los obstáculos. Otras redes y aparatos pueden causar interferencias; el rendimiento también se comparte entre usuarios y depende de la capacidad del router. Los dispositivos inalámbricos consumen batería.</p></div>
+          <div><h3>Tres familias de uso</h3><p class="text"><strong>eMBB</strong> busca banda ancha móvil mejorada; <strong>URLLC</strong>, comunicaciones de baja latencia y alta fiabilidad para casos que lo requieran; <strong>mMTC</strong>, conectividad para grandes cantidades de dispositivos IoT. Son objetivos de diseño, no garantías automáticas de servicio.</p></div>
+          <div><h3>Qué condiciona el resultado</h3><p class="text">La velocidad y latencia reales dependen del espectro, la carga de la celda, la distancia, obstáculos, backhaul, dispositivo, plan y configuración. Las cifras máximas teóricas no describen necesariamente la experiencia cotidiana.</p></div>
         </div>
       </section>
 
-      <section class="wiki-section" id="problemas" data-search="solucion problemas wifi señal lenta desconexiones cobertura velocidad reiniciar router canales">
-        <div class="section-heading"><span class="section-index">07</span><h2>Solución de problemas</h2></div>
-        <p class="section-intro">Un recorrido breve para aislar las causas más comunes antes de cambiar la configuración de la red.</p>
+      <section class="wiki-section" id="problemas" data-search="solución problemas 5g señal no aparece lento desconexiones cobertura sim operador datos móviles">
+        <div class="section-heading"><span class="section-index">07</span><h2>Solución de problemas 5G</h2></div>
+        <p class="section-intro">Revisa primero el dispositivo, el servicio contratado y la cobertura local. No todos los problemas de datos móviles se resuelven cambiando ajustes de radio.</p>
         <div class="trouble-list">
-          <details><summary>La señal llega débil</summary><p>Acércate al router, evita obstáculos densos y colócalo en una zona abierta y central. Para cubrir áreas grandes, considera un punto de acceso o sistema mesh compatible.</p></details>
-          <details><summary>La conexión va lenta</summary><p>Comprueba si ocurre en varios dispositivos, pausa descargas pesadas y prueba cerca del router. Si todo sigue lento, reinicia el equipo y consulta a tu proveedor.</p></details>
-          <details><summary>Hay desconexiones</summary><p>Verifica que el router esté ventilado y actualizado. Si el problema afecta a un solo equipo, olvida la red y vuelve a conectarte; si afecta a todos, revisa el router o la conexión del proveedor.</p></details>
-          <details><summary>No aparece la red</summary><p>Confirma que el Wi-Fi esté activado en el dispositivo y que el router esté encendido. Algunos equipos permiten ocultar o programar la emisión del nombre de red.</p></details>
+          <details><summary>No aparece el indicador 5G</summary><p>Comprueba que el teléfono admita las bandas usadas por el operador, que el plan y la SIM/eSIM estén habilitados para 5G y que haya cobertura en la ubicación. El dispositivo puede cambiar a 4G según señal y disponibilidad.</p></details>
+          <details><summary>La conexión es lenta</summary><p>Prueba en otra ubicación y horario, revisa si la celda está congestionada y confirma el consumo o las restricciones del plan. La etiqueta 5G por sí sola no determina la velocidad.</p></details>
+          <details><summary>Hay cortes o cambios entre 5G y 4G</summary><p>El equipo puede cambiar de tecnología para mantener la conexión o ahorrar energía. Reinicia el dispositivo, instala actualizaciones y consulta al operador si el problema persiste en zonas con cobertura declarada.</p></details>
+          <details><summary>El equipo no se registra en la red</summary><p>Activa y desactiva el modo avión, reinicia el teléfono y revisa que la selección automática de red esté habilitada. Si continúa, comprueba el estado de la cuenta y contacta al operador; evita restablecer ajustes sin guardar las configuraciones necesarias.</p></details>
         </div>
-        <div class="source-note"><p>Contenido basado en el documento compartido «16 Wifi.pdf». Las recomendaciones de seguridad y las generaciones Wi-Fi se actualizaron para reflejar el uso actual.</p><a href="16%20Wifi.pdf" target="_blank" rel="noopener">Abrir documento fuente ↗</a></div>
+        <div class="source-note"><p>Fuentes de consulta: visión general del sistema 5G de 3GPP y recomendación IMT-2020 de la UIT. Se enlazan las fuentes para contrastar arquitectura, estándares y capacidades; el rendimiento real depende de cada despliegue.</p><div><a href="https://www.3gpp.org/technologies/5g-system-overview" target="_blank" rel="noopener noreferrer">3GPP · visión general del sistema 5G ↗</a><br><a href="https://www.3gpp.org/specifications-technologies/releases/release-18" target="_blank" rel="noopener noreferrer">3GPP · Release 18 / 5G-Advanced ↗</a><br><a href="https://www.itu.int/rec/R-REC-M.2150/en" target="_blank" rel="noopener noreferrer">UIT · recomendación M.2150 IMT-2020 ↗</a></div></div>
       </section>
 
       <footer class="footer"><span>5G, en claro · Guía de consulta</span><span>Autores: Daniela Aldheni, Aline Celeste, Cesar Gabriel, Juan Aldrin y Pablo</span></footer>

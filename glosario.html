@@ -20,8 +20,8 @@
         <a href="index.html#fundamentos"><span class="nav-num">01</span> Fundamentos</a>
         <a href="index.html#estandares"><span class="nav-num">02</span> Estándares</a>
         <a href="index.html#red"><span class="nav-num">03</span> Cómo funciona</a>
-        <a href="index.html#hotspots"><span class="nav-num">04</span> Hotspots</a>
-        <a href="index.html#seguridad"><span class="nav-num">05</span> Seguridad</a>
+        <a href="index.html#hotspots"><span class="nav-num">04</span> Radio y espectro</a>
+        <a href="index.html#seguridad"><span class="nav-num">05</span> Seguridad 5G</a>
         <a href="index.html#ventajas"><span class="nav-num">06</span> Ventajas y límites</a>
         <a href="index.html#problemas"><span class="nav-num">07</span> Solución de problemas</a>
         <a href="glosario.html" class="active" aria-current="page"><span class="nav-num">08</span> Glosario</a>
@@ -49,13 +49,13 @@
       <header class="glossary-hero">
         <p class="eyebrow">Índice de consulta · Redes y conectividad</p>
         <h1>Conceptos,<br><em>en claro.</em></h1>
-        <p class="hero-copy">Definiciones rápidas de los términos de la wiki y una guía para distinguir los estándares IEEE de redes inalámbricas relacionadas.</p>
+        <p class="hero-copy">Definiciones de tecnologías móviles 5G, conceptos Wi-Fi y estándares relacionados, con términos de radio, núcleo, servicios y seguridad.</p>
       </header>
 
       <section class="glossary-tools" aria-label="Buscar y filtrar conceptos">
         <label class="search-wrap">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
-          <input class="search" type="search" placeholder="Ej.: 802.16, punto de acceso, WPA3..." aria-label="Buscar conceptos y estándares" id="glossary-search">
+          <input class="search" type="search" placeholder="Ej.: 5G NR, eMBB, punto de acceso, WPA3..." aria-label="Buscar conceptos y estándares" id="glossary-search">
           <span class="shortcut" aria-hidden="true">/</span>
         </label>
         <div class="glossary-filters" role="group" aria-label="Filtrar por categoría">
@@ -211,7 +211,47 @@
         </article>
         <article class="glossary-entry" data-category="5g">
           <span class="glossary-type">Antecedentes · Redes móviles</span><h2>Antecedentes de 5G</h2>
-          <p>La 5G evolucionó a partir de generaciones móviles anteriores: 1G analógica, 2G digital, 3G de datos móviles y 4G LTE de banda ancha IP. La UIT definió objetivos IMT-2020 y 3GPP estandarizó 5G NR desde Release 15; su despliegue comenzó comercialmente alrededor de 2019.</p>
+          <p>5G continúa la evolución de las redes móviles. La UIT define el marco IMT-2020 y 3GPP desarrolla las especificaciones del sistema 5G; la primera fase de 5G se especificó en Release 15. La disponibilidad de cada función depende de las versiones y despliegues del operador.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Organización · Estándares móviles</span><h2>3GPP</h2>
+          <p>Proyecto de colaboración entre organizaciones de normalización que desarrolla especificaciones técnicas para sistemas móviles, incluido 5G. No es un operador ni una autoridad reguladora; las asignaciones de espectro corresponden a organismos y gobiernos de cada región.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Marco · UIT-R</span><h2>IMT-2020</h2>
+          <p>Marco de la UIT para los sistemas móviles de quinta generación y nombre de sus requisitos y especificaciones de interfaces radio terrestres. 5G es el término de uso común; las tecnologías concretas se especifican mediante estándares como los de 3GPP.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Dispositivo · Red móvil</span><h2>UE (equipo de usuario)</h2>
+          <p>Equipo que utiliza una persona o servicio para conectarse a la red móvil, como un teléfono, módem o dispositivo IoT. En 5G, el UE intercambia señalización y datos con la red de acceso y puede identificarse y autenticarse mediante credenciales de abonado.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Servicios · Casos de uso</span><h2>eMBB, URLLC y mMTC</h2>
+          <p>Familias de escenarios de uso: banda ancha móvil mejorada (eMBB), comunicaciones de baja latencia y alta fiabilidad (URLLC), y comunicaciones masivas tipo máquina (mMTC). Son objetivos para distintos casos de uso, no garantías de que toda red 5G ofrezca siempre esas prestaciones.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Evolución · 3GPP</span><h2>5G-Advanced</h2>
+          <p>Nombre que 3GPP utiliza para la evolución de 5G a partir de Release 18. Incorpora mejoras y nuevas funciones al sistema; su inclusión en una especificación no significa que estén activadas por todos los operadores o dispositivos.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Arquitectura · Núcleo 5G</span><h2>Arquitectura basada en servicios (SBA)</h2>
+          <p>Modelo del 5GC en el que las funciones de red ofrecen servicios a otras funciones autorizadas mediante interfaces comunes. Facilita una arquitectura modular; no significa que las funciones estén expuestas sin controles de autorización.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Núcleo · Funciones de red</span><h2>UDM, AUSF y PCF</h2>
+          <p>Funciones del núcleo 5G: UDM gestiona datos de suscripción; AUSF participa en la autenticación; PCF proporciona reglas de política. Interactúan con otras funciones del 5GC según los procedimientos y la arquitectura de la red.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Sesión · Datos móviles</span><h2>Sesión PDU</h2>
+          <p>Conexión lógica que permite al UE intercambiar datos con una red de datos mediante el 5GC. Sus parámetros y encaminamiento se gestionan durante el establecimiento y la modificación de la sesión; no equivalen a una llamada de voz.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g security">
+          <span class="glossary-type">Seguridad · Identidad</span><h2>5G-AKA y SUCI</h2>
+          <p>5G-AKA es uno de los mecanismos de autenticación del sistema 5G. SUCI es una forma protegida de representar la identidad permanente del abonado al transmitirla por radio. La protección depende de la configuración de la red y de las credenciales del abonado.</p>
+        </article>
+        <article class="glossary-entry" data-category="5g">
+          <span class="glossary-type">Radio · Recursos</span><h2>Numerología NR</h2>
+          <p>5G NR permite configurar el espaciado entre subportadoras y la duración de los símbolos en función de la banda y el despliegue. Esta flexibilidad adapta la interfaz radio a distintos escenarios; no determina por sí sola la cobertura ni la velocidad.</p>
         </article>
         <article class="glossary-entry" data-category="5g">
           <span class="glossary-type">Estándar · Radio móvil</span><h2>5G NR</h2>
@@ -282,6 +322,14 @@
           <p>Función de 5G que permite configurar segmentos lógicos de una infraestructura compartida con políticas y recursos distintos para ciertos servicios. No crea redes físicas independientes ni garantiza por sí sola aislamiento absoluto o calidad determinada.</p>
         </article>
       </section>
+      <div class="source-note">
+        <p>Los conceptos de 5G se contrastaron con fuentes oficiales de 3GPP y la UIT. Consulta las especificaciones para el detalle técnico y las capacidades desplegadas por cada operador.</p>
+        <div>
+          <a href="https://www.3gpp.org/technologies/5g-system-overview" target="_blank" rel="noopener noreferrer">3GPP · Visión general de 5G ↗</a><br>
+          <a href="https://www.3gpp.org/specifications-technologies/releases/release-18" target="_blank" rel="noopener noreferrer">3GPP · Release 18 / 5G-Advanced ↗</a><br>
+          <a href="https://www.itu.int/rec/R-REC-M.2150/en" target="_blank" rel="noopener noreferrer">UIT · IMT-2020 (M.2150) ↗</a>
+        </div>
+      </div>
       <p class="glossary-empty" id="glossary-empty" role="status">No hay conceptos que coincidan. Prueba otra búsqueda o categoría.</p>
 
       <footer class="footer"><span>5G, en claro · Glosario</span><span>Autores: Daniela Aldheni, Aline Celeste, Cesar Gabriel, Juan Aldrin y Pablo</span></footer>
@@ -340,7 +388,7 @@
       let visibleCount = 0;
       for (const entry of entries) {
         const matchesText = normalize(entry.textContent).includes(query);
-        const matchesFilter = activeFilter === 'all' || entry.dataset.category === activeFilter;
+        const matchesFilter = activeFilter === 'all' || entry.dataset.category.split(/\s+/).includes(activeFilter);
         entry.hidden = !(matchesText && matchesFilter);
         if (!entry.hidden) visibleCount++;
       }
